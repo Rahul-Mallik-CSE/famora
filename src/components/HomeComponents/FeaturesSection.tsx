@@ -9,6 +9,11 @@ import {
   Utensils,
 } from "lucide-react";
 import SectionHeading from "@/components/CommonComponents/SectionHeading";
+import {
+  MotionReveal,
+  MotionStagger,
+  MotionStaggerItem,
+} from "@/components/CommonComponents/MotionReveal";
 
 const features = [
   {
@@ -52,32 +57,33 @@ const FeaturesSection = () => {
   return (
     <section id="features" className="w-full bg-transparent py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          semiTitle="Everything Your Family Needs"
-          title="One bot. Endless possibilities."
-        />
+        <MotionReveal>
+          <SectionHeading
+            semiTitle="Everything Your Family Needs"
+            title="One bot. Endless possibilities."
+          />
+        </MotionReveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        <MotionStagger className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <article
-                key={feature.title}
-                className="rounded-2xl border border-button-bg/20 bg-card-bg p-6 sm:p-7"
-              >
-                <div className="mb-2 md:mb-6 flex h-10 w-10 items-center justify-center rounded-full bg-button-bg text-white">
-                  <Icon className="h-4 w-4" />
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-primary">
-                  {feature.title}
-                </h3>
-                <p className="mt-1 md:mt-2 text-xs md:text-[15px] md:leading-6 text-secondary">
-                  {feature.description}
-                </p>
-              </article>
+              <MotionStaggerItem key={feature.title}>
+                <article className="rounded-2xl border border-button-bg/20 bg-card-bg p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-7">
+                  <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-button-bg text-white md:mb-6">
+                    <Icon className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-primary md:text-xl">
+                    {feature.title}
+                  </h3>
+                  <p className="mt-1 text-xs text-secondary md:mt-2 md:text-[15px] md:leading-6">
+                    {feature.description}
+                  </p>
+                </article>
+              </MotionStaggerItem>
             );
           })}
-        </div>
+        </MotionStagger>
       </div>
     </section>
   );

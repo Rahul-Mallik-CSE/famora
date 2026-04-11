@@ -2,6 +2,11 @@
 
 import { Star } from "lucide-react";
 import SectionHeading from "@/components/CommonComponents/SectionHeading";
+import {
+  MotionReveal,
+  MotionStagger,
+  MotionStaggerItem,
+} from "@/components/CommonComponents/MotionReveal";
 
 const feedback = [
   {
@@ -28,39 +33,40 @@ const FeedbackSection = () => {
   return (
     <section className="w-full bg-secondary-background py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          semiTitle="What Families Say"
-          title="Loved by thousands of families"
-        />
+        <MotionReveal>
+          <SectionHeading
+            semiTitle="What Families Say"
+            title="Loved by thousands of families"
+          />
+        </MotionReveal>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
+        <MotionStagger className="mt-12 grid gap-5 md:grid-cols-3">
           {feedback.map((item) => (
-            <article
-              key={item.name}
-              className="rounded-2xl border border-button-bg/18 bg-card-bg p-6"
-            >
-              <div className="mb-6 flex gap-1 text-button-bg">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={`${item.name}-${i}`}
-                    className="h-4 w-4 fill-current"
-                  />
-                ))}
-              </div>
+            <MotionStaggerItem key={item.name}>
+              <article className="rounded-2xl border border-button-bg/18 bg-card-bg p-6 transition-transform duration-300 hover:-translate-y-1">
+                <div className="mb-6 flex gap-1 text-button-bg">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={`${item.name}-${i}`}
+                      className="h-4 w-4 fill-current"
+                    />
+                  ))}
+                </div>
 
-              <p className="text-sm md:text-[15px] leading-7 text-primary/90 italic">
-                &ldquo;{item.quote}&rdquo;
-              </p>
+                <p className="text-sm leading-7 text-primary/90 italic md:text-[15px]">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
 
-              <p className="mt-6 text-[13px] md:text-sm font-semibold text-primary">
-                {item.name}
-              </p>
-              <p className="text-xs md:text-[13px] text-secondary">
-                {item.role}
-              </p>
-            </article>
+                <p className="mt-6 text-[13px] font-semibold text-primary md:text-sm">
+                  {item.name}
+                </p>
+                <p className="text-xs text-secondary md:text-[13px]">
+                  {item.role}
+                </p>
+              </article>
+            </MotionStaggerItem>
           ))}
-        </div>
+        </MotionStagger>
       </div>
     </section>
   );

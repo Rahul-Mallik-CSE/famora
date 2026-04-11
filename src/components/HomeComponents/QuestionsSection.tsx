@@ -7,6 +7,11 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  MotionReveal,
+  MotionStagger,
+  MotionStaggerItem,
+} from "@/components/CommonComponents/MotionReveal";
 
 const faqs = [
   {
@@ -45,29 +50,30 @@ const QuestionsSection = () => {
   return (
     <section id="faq" className="w-full bg-transparent py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          semiTitle="Common Questions"
-          title="Frequently Asked Questions"
-        />
+        <MotionReveal>
+          <SectionHeading
+            semiTitle="Common Questions"
+            title="Frequently Asked Questions"
+          />
+        </MotionReveal>
 
-        <div className="mx-auto mt-10 max-w-4xl">
+        <MotionStagger className="mx-auto mt-10 max-w-4xl">
           {faqs.map((faq) => (
-            <Collapsible
-              key={faq.question}
-              className="border-b border-button-bg/20 py-2 md:py-3"
-            >
-              <CollapsibleTrigger className="group flex w-full cursor-pointer items-center justify-between gap-4 py-2 text-left text-base font-medium text-[#2C2420] md:text-lg">
-                <span className="font-bold">{faq.question}</span>
-                <ChevronDown className="h-4 w-4 shrink-0 text-button-bg transition-transform duration-200 group-data-[state=open]:rotate-180" />
-              </CollapsibleTrigger>
-              <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                <p className="pb-2 pr-8 text-sm leading-7 text-secondary md:text-base">
-                  {faq.answer}
-                </p>
-              </CollapsibleContent>
-            </Collapsible>
+            <MotionStaggerItem key={faq.question}>
+              <Collapsible className="border-b border-button-bg/20 py-2 md:py-3">
+                <CollapsibleTrigger className="group flex w-full cursor-pointer items-center justify-between gap-4 py-2 text-left text-base font-medium text-[#2C2420] md:text-lg">
+                  <span className="font-bold">{faq.question}</span>
+                  <ChevronDown className="h-4 w-4 shrink-0 text-button-bg transition-transform duration-200 group-data-[state=open]:rotate-180" />
+                </CollapsibleTrigger>
+                <CollapsibleContent className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+                  <p className="pb-2 pr-8 text-sm leading-7 text-secondary md:text-base">
+                    {faq.answer}
+                  </p>
+                </CollapsibleContent>
+              </Collapsible>
+            </MotionStaggerItem>
           ))}
-        </div>
+        </MotionStagger>
       </div>
     </section>
   );
