@@ -48,7 +48,7 @@ const SetupGuidelineSection = () => {
                 <h3 className="mt-5 text-xl font-semibold text-primary">
                   {step.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-secondary">
+                <p className="mt-3 text-[15px] leading-7 text-secondary">
                   {step.description}
                 </p>
               </div>
