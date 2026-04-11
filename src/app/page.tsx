@@ -2,6 +2,7 @@
 
 import FeaturesSection from "@/components/HomeComponents/FeaturesSection";
 import HeroSection from "@/components/HomeComponents/HeroSection";
+import PrivacyAndControllSection from "@/components/HomeComponents/PrivacyAndControllSection";
 import SetupGuidelineSection from "@/components/HomeComponents/SetupGuidelineSection";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <HeroSection />
       <SetupGuidelineSection />
       <FeaturesSection />
+      <PrivacyAndControllSection />
     </div>
   );
 }
