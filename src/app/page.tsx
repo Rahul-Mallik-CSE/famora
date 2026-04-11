@@ -1,6 +1,7 @@
 /** @format */
 
 import FeaturesSection from "@/components/HomeComponents/FeaturesSection";
+import FeedbackSection from "@/components/HomeComponents/FeedbackSection";
 import HeroSection from "@/components/HomeComponents/HeroSection";
 import PricingSection from "@/components/HomeComponents/PricingSection";
 import PrivacyAndControllSection from "@/components/HomeComponents/PrivacyAndControllSection";
@@ -14,6 +15,7 @@ export default function Home() {
       <FeaturesSection />
       <PrivacyAndControllSection />
       <PricingSection />
+      <FeedbackSection />
     </div>
   );
 }
