@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/dialog";
 
 const navItems = [
-  { label: "Home", href: "#home", active: true },
+  { label: "Home", href: "/", active: true },
   { label: "Features", href: "#features" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
