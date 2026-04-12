@@ -99,7 +99,7 @@ const SimpleSetupSection = () => {
 
             return (
               <MotionStaggerItem key={step.id}>
-                <article className="grid grid-cols-[auto,1fr] gap-4 py-5 md:gap-6 md:py-6">
+                <article className="flex gap-4 py-5 md:gap-6 md:py-6">
                   <div className="flex flex-col items-center">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-button-bg text-white md:h-12 md:w-12">
                       <Icon className="h-4 w-4 md:h-5 md:w-5" />
@@ -120,7 +120,7 @@ const SimpleSetupSection = () => {
                 </article>
 
                 {idx !== steps.length - 1 && (
-                  <div className="ml-14 border-b border-button-bg/18 md:ml-18" />
+                  <div className=" border-b border-button-bg/18 " />
                 )}
               </MotionStaggerItem>
             );
