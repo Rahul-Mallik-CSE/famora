@@ -4,27 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { MotionReveal } from "@/components/CommonComponents/MotionReveal";
+import SectionHeading from "../CommonComponents/SectionHeading";
 
 const HeroSection = () => {
   return (
     <section id="home" className="w-full bg-transparent py-16 sm:py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
         <MotionReveal>
-          <p className="mb-3 text-[11px] font-semibold tracking-[0.18em] text-button-bg uppercase sm:text-[13px]">
-            AI-Powered Family Assistant
-          </p>
-        </MotionReveal>
-        <MotionReveal delay={0.08}>
-          <h1 className="max-w-4xl text-3xl leading-[1.08] font-bold tracking-tight text-primary sm:text-5xl lg:text-[56px]">
-            One AI Bot. Your Entire Family. <br className="hidden sm:block" />
-            All on WhatsApp.
-          </h1>
-        </MotionReveal>
-        <MotionReveal delay={0.14}>
-          <p className="mt-6 max-w-2xl text-base leading-7 text-secondary sm:text-lg">
-            Manage appointments, share reminders, plan meals, and stay organised
-            all through a simple WhatsApp message.
-          </p>
+          <SectionHeading
+            semiTitle="AI-Powered Family Assistant"
+            titleClassName="max-w-4xl text-3xl leading-[1.08] font-bold tracking-tight text-primary sm:text-5xl lg:text-[56px]"
+            descriptionClassName="max-w-2xl text-base leading-7 text-secondary sm:text-lg"
+            title="One AI Bot. Your Entire Family. All on WhatsApp."
+            description="Manage appointments, share reminders, plan meals, and stay organised all through a simple WhatsApp message."
+          />
         </MotionReveal>
 
         <MotionReveal delay={0.2}>
