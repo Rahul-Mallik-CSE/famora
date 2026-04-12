@@ -59,6 +59,7 @@ const SimplePricingSection = () => {
           <SectionHeading
             semiTitle="SIMPLE PRICING"
             title="Simple, transparent pricing"
+            titleClassName="text-3xl leading-[1.08] font-bold tracking-tight text-primary sm:text-5xl lg:text-[56px]"
             description="No hidden fees. Cancel anytime. Data retained for 30 days after cancellation."
           />
         </MotionReveal>
