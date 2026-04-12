@@ -140,7 +140,7 @@ const PricingSection = () => {
                       : "border-primary/35 bg-transparent text-primary hover:bg-primary/5!"
                   }`}
                 >
-                  <Link href="#get-started">{plan.cta}</Link>
+                  <Link href="/get-started">{plan.cta}</Link>
                 </Button>
               </article>
             </MotionStaggerItem>
