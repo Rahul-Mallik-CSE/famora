@@ -56,15 +56,15 @@ const StorySection = () => {
           stagger={0.1}
         >
           <div className="relative">
-            <div className="absolute bottom-4 left-5.5 top-4 w-px bg-button-bg/35 md:left-6" />
+            <div className="absolute bottom-4 left-5.5 top-4 w-px bg-button-bg/28 md:left-6" />
             <div className="space-y-8 md:space-y-10">
               {story.map((item) => (
                 <MotionStaggerItem
                   key={item.year}
-                  className="grid grid-cols-[44px,1fr] gap-4 md:grid-cols-[52px,1fr] md:gap-6"
+                  className="grid items-start grid-cols-[44px_1fr] gap-4 md:grid-cols-[48px_1fr] md:gap-6"
                 >
                   <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full bg-button-bg text-xs font-semibold text-white md:h-12 md:w-12 md:text-sm">
-                    {item.yearShort}
+                    <span>{item.yearShort}</span>
                   </div>
                   <article>
                     <p className="text-[11px] font-semibold tracking-[0.16em] text-button-bg uppercase md:text-xs">
