@@ -19,34 +19,34 @@ const footerNavigation = [
   {
     title: "Product",
     links: [
-      { label: "Features", href: "#features" },
-      { label: "Pricing", href: "#pricing" },
-      { label: "How It Works", href: "#how-it-works" },
-      { label: "FAQ", href: "#faq" },
+      { label: "Features", href: "/features" },
+      { label: "Pricing", href: "/pricing" },
+      { label: "FAQ", href: "/faq" },
+      { label: "How It Works", href: "/how-it-works" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Blog", href: "#" },
+      { label: "About Us", href: "/about" },
+      { label: "Contact", href: "/contact" },
+      { label: "Blog", href: "/blog" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
+      { label: "Privacy Policy", href: "/privacy-policy" },
+      { label: "Terms of Service", href: "/terms-of-service" },
+      { label: "Cookie Policy", href: "/cookie-policy" },
     ],
   },
 ];
 
 const socialLinks: FooterLink[] = [
-  { label: "WhatsApp", href: "#", icon: MessageCircle },
-  { label: "Instagram", href: "#", icon: Camera },
-  { label: "Facebook", href: "#", icon: ThumbsUp },
+  { label: "WhatsApp", href: "#whatsapp", icon: MessageCircle },
+  { label: "Instagram", href: "#instagram", icon: Camera },
+  { label: "Facebook", href: "#facebook", icon: ThumbsUp },
 ];
 
 const Footer = () => {
