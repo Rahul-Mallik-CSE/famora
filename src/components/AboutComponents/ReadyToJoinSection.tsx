@@ -24,7 +24,7 @@ const ReadyToJoinSection = () => {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Button
               asChild
-              className="h-11 w-full rounded-full bg-button-bg px-10 text-sm font-medium text-white hover:bg-button-bg/90 sm:w-auto"
+              className="h-11 w-full rounded-full bg-button-bg px-10 text-sm font-medium text-white hover:bg-button-bg/90! sm:w-auto"
             >
               <Link href="/get-started">Get Started</Link>
             </Button>
@@ -32,7 +32,7 @@ const ReadyToJoinSection = () => {
             <Button
               asChild
               variant="outline"
-              className="h-11 w-full rounded-full border-primary/35 bg-transparent px-8 text-sm font-medium text-primary hover:bg-primary/5 sm:w-auto"
+              className="h-11 w-full rounded-full border-primary/35 bg-transparent px-8 text-sm font-medium text-primary hover:bg-primary/5! sm:w-auto"
             >
               <Link href="#" className="inline-flex items-center gap-2">
                 Get in Touch
