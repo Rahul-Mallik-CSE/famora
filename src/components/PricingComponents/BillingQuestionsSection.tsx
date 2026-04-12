@@ -43,7 +43,7 @@ const BillingQuestionsSection = () => {
   const [openItem, setOpenItem] = useState<number | null>(0);
 
   return (
-    <section className="w-full py-16 md:py-24 px-4 bg-transparent">
+    <section className="w-full py-16 md:py-24 px-4 bg-secondary-background">
       <div className="max-w-3xl mx-auto">
         <MotionReveal>
           <SectionHeading
