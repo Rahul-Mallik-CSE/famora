@@ -4,6 +4,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { MenuIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,7 @@ import {
 } from "@/components/ui/dialog";
 
 const navItems = [
-  { label: "Home", href: "/", active: true },
+  { label: "Home", href: "/" },
   { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
   { label: "FAQ", href: "/faq" },
@@ -23,6 +24,16 @@ const navItems = [
 ];
 
 const NavBar = () => {
+  const pathname = usePathname();
+
+  const isActiveLink = (href: string) => {
+    if (href === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === href || pathname.startsWith(`${href}/`);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#d8cab4] bg-secondary-background/95 backdrop-blur-sm">
       <div className="mx-auto flex h-14 md:h-18 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
@@ -46,7 +57,7 @@ const NavBar = () => {
               key={item.label}
               href={item.href}
               className={`rounded-full px-4 py-2 text-[15px] transition-colors duration-200 ${
-                item.active
+                isActiveLink(item.href)
                   ? "text-button-bg"
                   : "text-primary hover:text-secondary"
               }`}
@@ -87,7 +98,7 @@ const NavBar = () => {
                   key={item.label}
                   href={item.href}
                   className={`rounded-2xl px-4 py-2 text-[15px] font-medium transition-colors ${
-                    item.active
+                    isActiveLink(item.href)
                       ? "bg-white text-button-bg shadow-sm"
                       : "text-primary hover:bg-white/70"
                   }`}
