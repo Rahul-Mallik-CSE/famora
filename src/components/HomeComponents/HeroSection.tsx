@@ -26,14 +26,14 @@ const HeroSection = () => {
               asChild
               className="h-10 md:h-12 w-full rounded-full bg-button-bg px-7 text-sm font-medium text-white hover:bg-[#9f8046]! sm:w-auto"
             >
-              <Link href="#pricing">Start Your Free Trial</Link>
+              <Link href="/pricing">Start Your Free Trial</Link>
             </Button>
             <Button
               asChild
               variant="outline"
               className="h-10 md:h-12 w-full rounded-full border-primary/45 bg-transparent px-7 text-sm font-medium text-primary hover:bg-primary/5! sm:w-auto"
             >
-              <Link href="#how-it-works">See How It Works</Link>
+              <Link href="/how-it-works">See How It Works</Link>
             </Button>
           </div>
         </MotionReveal>

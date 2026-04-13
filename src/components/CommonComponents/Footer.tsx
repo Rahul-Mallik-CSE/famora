@@ -68,8 +68,8 @@ const Footer = () => {
             free trial today.
           </p>
           <Link
-            href="#pricing"
-            className="mt-7 inline-flex h-10 md:h-11 items-center rounded-full bg-button-bg px-8 text-sm font-medium text-white transition-colors hover:bg-[#9f8046]"
+            href="/pricing"
+            className="mt-7  duration-100 hover:scale-102 cursor-pointer inline-flex h-10 md:h-11 items-center rounded-full bg-button-bg px-8 text-sm font-medium text-white transition-colors hover:bg-[#9f8046]"
           >
             Start Your Free Trial
           </Link>
