@@ -72,13 +72,13 @@ const WhatsAppSection = () => {
           </MotionReveal>
 
           <MotionReveal delay={0.08}>
-            <div className="overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(44,36,32,0.16)]">
+            <div className="overflow-hidden rounded-3xl shadow-[0_20px_40px_rgba(44,36,32,0.16)] transition-transform duration-300 hover:scale-101 ">
               <Image
                 src="/featuresWpBanner.jpg"
                 alt="Family using WhatsApp on a smartphone"
                 width={960}
                 height={640}
-                className="h-auto w-full object-cover"
+                className="h-auto w-full object-cover cursor-pointer"
               />
             </div>
           </MotionReveal>

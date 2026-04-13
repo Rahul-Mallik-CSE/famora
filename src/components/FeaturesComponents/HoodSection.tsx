@@ -65,7 +65,7 @@ const HoodSection = () => {
 
             return (
               <MotionStaggerItem key={card.title}>
-                <article className="h-full rounded-2xl border border-button-bg/20 bg-card-bg p-5 sm:p-6">
+                <article className="h-full rounded-2xl border border-button-bg/20 bg-card-bg p-5 sm:p-6 transition-transform duration-300 hover:-translate-y-1">
                   <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-button-bg/16 text-button-bg">
                     <Icon className="h-4 w-4" />
                   </div>

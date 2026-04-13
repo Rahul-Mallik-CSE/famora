@@ -39,7 +39,7 @@ const HeroSection = () => {
         </MotionReveal>
 
         <MotionReveal delay={0.26}>
-          <div className="mt-6 sm:mt-12">
+          <div className="mt-6 sm:mt-12 cursor-pointer transition-transform duration-300 hover:scale-101 ">
             <Image
               src="/PhoneMockup.png"
               alt="Famora AI WhatsApp phone mockup"
