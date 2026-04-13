@@ -59,7 +59,7 @@ const MissionSection = () => {
           </MotionReveal>
 
           <MotionReveal delay={0.1}>
-            <div className="overflow-hidden rounded-3xl border border-button-bg/18 shadow-[0_20px_40px_rgba(44,36,32,0.14)]">
+            <div className="overflow-hidden rounded-3xl border border-button-bg/18 shadow-[0_20px_40px_rgba(44,36,32,0.14)]  transition-transform duration-300 hover:scale-101 cursor-pointer">
               <Image
                 src="/mission-banner.jpg"
                 alt="Family members using phone together"

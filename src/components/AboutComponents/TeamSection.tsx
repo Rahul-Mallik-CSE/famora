@@ -46,7 +46,7 @@ const TeamSection = () => {
         >
           {teamMembers.map((member) => (
             <MotionStaggerItem key={member.name}>
-              <article className="overflow-hidden rounded-2xl border border-button-bg/18 bg-white shadow-[0_12px_28px_rgba(44,36,32,0.1)]">
+              <article className="overflow-hidden rounded-2xl border border-button-bg/18 bg-white shadow-[0_12px_28px_rgba(44,36,32,0.1)] transition-transform duration-300 hover:-translate-y-1">
                 <Image
                   src={member.image}
                   alt={member.name}

@@ -56,7 +56,7 @@ const SeeItInActionSection = () => {
         >
           {chatCards.map((card) => (
             <MotionStaggerItem key={card.id} className={card.className}>
-              <div className="overflow-hidden rounded-xl border border-button-bg/12 bg-white/40 shadow-[0_8px_24px_rgba(44,36,32,0.08)]">
+              <div className="overflow-hidden rounded-xl border border-button-bg/12 bg-white/40 shadow-[0_8px_24px_rgba(44,36,32,0.08)] transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
                 <Image
                   src={card.src}
                   alt={card.alt}

@@ -78,7 +78,7 @@ const StandForSection = () => {
 
             return (
               <MotionStaggerItem key={value.title}>
-                <article className="h-full rounded-2xl border border-button-bg/18 bg-white p-5 md:p-6">
+                <article className="h-full rounded-2xl border border-button-bg/18 bg-white p-5 md:p-6 transition-transform duration-300 hover:-translate-y-1">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary-background text-button-bg">
                     <Icon className="h-5 w-5" />
                   </div>

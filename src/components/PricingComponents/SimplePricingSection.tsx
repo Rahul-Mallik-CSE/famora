@@ -78,7 +78,7 @@ const SimplePricingSection = () => {
             <button
               onClick={() => setIsAnnual(!isAnnual)}
               className={cn(
-                "relative inline-flex h-8 w-16 items-center rounded-full transition-colors",
+                "relative cursor-pointer inline-flex h-8 w-16 items-center rounded-full transition-colors",
                 isAnnual ? "bg-button-bg" : "bg-gray-300",
               )}
             >
@@ -110,7 +110,7 @@ const SimplePricingSection = () => {
             <MotionStaggerItem key={plan.name} className="relative h-full">
               <div
                 className={cn(
-                  "rounded-2xl p-8 md:p-10 h-full flex flex-col transition-all duration-300",
+                  "rounded-2xl p-8 md:p-10 h-full flex flex-col transition-transform duration-300 hover:-translate-y-1",
                   plan.isPopular ? plan.color : plan.color,
                   plan.isPopular
                     ? "md:scale-105 shadow-2xl"
