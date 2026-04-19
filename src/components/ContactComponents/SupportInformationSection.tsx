@@ -27,18 +27,20 @@ const SupportCard = ({
   return (
     <MotionReveal delay={delay} className="h-full">
       <div className="flex flex-col h-full rounded-lg border border-gray-200 bg-white p-8 hover:shadow-lg transition-shadow duration-300">
-        <Icon className="w-8 h-8 mb-4 text-button-bg" strokeWidth={1.5} />
-        <h3 className="text-base md:lg font-semibold text-primary mb-3">
+        <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-secondary-background text-secondary md:mb-4">
+          <Icon className="h-4 w-4" />
+        </div>
+        <h3 className="text-base md:lg font-semibold text-primary mb-2">
           {title}
         </h3>
-        <p className="text-xs md:text-sm text-secondary mb-6 grow">
+        <p className="text-xs md:text-sm text-secondary mb-3 grow">
           {description}
         </p>
-        <p className="text-primary font-medium text-sm md:text-[15px] mb-4">
+        <p className="text-primary font-medium text-sm md:text-[15px] mb-3">
           {contact}
         </p>
-        <button className="text-button-bg text-xs md:text-sm font-medium hover:opacity-80 transition-opacity">
-          {actionText} →
+        <button className="text-button-bg cursor-pointer text-start text-xs md:text-sm font-medium hover:opacity-80 transition-opacity">
+          {actionText}
         </button>
       </div>
     </MotionReveal>
@@ -53,7 +55,7 @@ const SupportInformationSection = () => {
       description:
         "For general enquiries, billing questions, and account help.",
       contact: "hello@famora.ai",
-      actionText: "Send an email",
+      actionText: "Send an email  →",
       delay: 0,
     },
     {
@@ -62,7 +64,7 @@ const SupportInformationSection = () => {
       description:
         "Get help directly on WhatsApp — the platform you already use.",
       contact: "+44 7700 900 123",
-      actionText: "Message us",
+      actionText: "Message us  →",
       delay: 0.1,
     },
     {

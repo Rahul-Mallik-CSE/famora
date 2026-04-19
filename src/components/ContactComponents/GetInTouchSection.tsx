@@ -7,7 +7,7 @@ import { MotionReveal } from "../CommonComponents/MotionReveal";
 
 const GetInTouchSection = () => {
   return (
-    <section className="w-full bg-transparent py-16 sm:py-20">
+    <section className="w-full bg-secondary-background py-16 sm:py-20">
       <div className="mx-auto flex max-w-7xl flex-col items-center px-4 text-center sm:px-6 lg:px-8">
         <MotionReveal>
           <SectionHeading
