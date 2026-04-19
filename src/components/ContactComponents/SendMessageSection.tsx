@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import { MotionReveal } from "../CommonComponents/MotionReveal";
+import SectionHeading from "../CommonComponents/SectionHeading";
 
 const SendMessageSection = () => {
   const [formData, setFormData] = useState({
@@ -32,15 +33,18 @@ const SendMessageSection = () => {
   };
 
   return (
-    <MotionReveal className="space-y-6">
-      <div>
-        <h3 className="text-lg md:text-xl font-semibold text-primary mb-2">
-          Send a Message
-        </h3>
-        <p className="text-xs md:text-sm text-secondary">SEND A MESSAGE</p>
-      </div>
+    <MotionReveal className="space-y-8 w-full">
+      <SectionHeading
+        semiTitle="SEND A MESSAGE"
+        title="Write to us directly"
+        className="mb-0 text-left"
+        titleClassName="md:text-3xl"
+      />
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form
+        onSubmit={handleSubmit}
+        className="space-y-6 mt-4 md:mt-6 bg-white rounded-xl p-4  md:p-8"
+      >
         {/* Enquiry Type */}
         <div>
           <label className="block text-xs md:text-sm font-medium text-primary mb-2">
@@ -134,8 +138,8 @@ const SendMessageSection = () => {
         </button>
 
         <p className="text-xs text-secondary text-center">
-          We'll get back to you within 1 business day. Your details will only be
-          used to respond to your enquiry.
+          We&apos;ll get back to you within 1 business day. Your details will
+          only be used to respond to your enquiry.
         </p>
       </form>
     </MotionReveal>

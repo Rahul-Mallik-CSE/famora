@@ -27,8 +27,8 @@ const SupportCard = ({
   return (
     <MotionReveal delay={delay} className="h-full">
       <div className="flex flex-col h-full rounded-lg border border-gray-200 bg-white p-8 hover:shadow-lg transition-shadow duration-300">
-        <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-secondary-background text-secondary md:mb-4">
-          <Icon className="h-4 w-4" />
+        <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-button-bg/25 text-button-bg">
+          <Icon className="h-4 w-4 text-secondary" />
         </div>
         <h3 className="text-base md:lg font-semibold text-primary mb-2">
           {title}

@@ -2,42 +2,28 @@
 
 "use client";
 
-import { useState } from "react";
-import { ChevronDown, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import {
   MotionReveal,
   MotionStagger,
   MotionStaggerItem,
 } from "../CommonComponents/MotionReveal";
+import SectionHeading from "../CommonComponents/SectionHeading";
 
 type FAQItem = {
   question: string;
   answer: string;
 };
 
-const FAQAccordion = ({ item }: { item: FAQItem }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const FAQItemBlock = ({ item }: { item: FAQItem }) => {
   return (
-    <div className="border-b border-gray-200 py-4">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-start justify-between w-full gap-4 hover:opacity-70 transition-opacity"
-      >
-        <h4 className="text-primary text-sm md:text-base font-semibold text-left">
-          {item.question}
-        </h4>
-        <ChevronDown
-          className={`w-5 h-5 flex-shrink-0 text-button-bg transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
-        />
-      </button>
-      {isOpen && (
-        <p className="text-secondary text-xs md:text-sm mt-3 leading-6">
-          {item.answer}
-        </p>
-      )}
+    <div className="w-full py-2 md:py-4">
+      <h4 className="text-primary text-sm md:text-base font-semibold text-left">
+        {item.question}
+      </h4>
+      <p className="text-secondary text-xs md:text-sm mt-3 leading-6">
+        {item.answer}
+      </p>
     </div>
   );
 };
@@ -73,18 +59,18 @@ const QuickAnswersSection = () => {
   ];
 
   return (
-    <MotionReveal className="space-y-6">
-      <div>
-        <h3 className="text-lg md:text-xl font-semibold text-primary mb-2">
-          Quick Answers
-        </h3>
-        <p className="text-xs md:text-sm text-secondary">COMMON QUESTIONS</p>
-      </div>
+    <MotionReveal className="space-y-8">
+      <SectionHeading
+        semiTitle="COMMON QUESTIONS"
+        title="Quick answers"
+        className="mb-0 text-left"
+        titleClassName="md:text-3xl"
+      />
 
-      <MotionStagger className="space-y-0">
+      <MotionStagger className="space-y-0 divide-y mt-4 md:mt-6 divide-gray-200">
         {faqItems.map((item, index) => (
           <MotionStaggerItem key={index}>
-            <FAQAccordion item={item} />
+            <FAQItemBlock item={item} />
           </MotionStaggerItem>
         ))}
       </MotionStagger>
@@ -95,7 +81,7 @@ const QuickAnswersSection = () => {
         className="mt-8 p-6 bg-gray-50 rounded-lg border border-gray-200"
       >
         <div className="flex gap-3">
-          <MapPin className="w-5 h-5 text-button-bg flex-shrink-0 mt-0.5" />
+          <MapPin className="w-5 h-5 text-button-bg shrink-0 mt-0.5" />
           <div>
             <h4 className="text-primary font-semibold text-sm md:text-base mb-2">
               Registered Office
