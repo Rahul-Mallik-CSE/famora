@@ -1,7 +1,18 @@
 {
   "name": "famora",
   "version": "0.1.0",
+  "description": "Famora marketing and onboarding website for a WhatsApp-first AI family assistant.",
   "private": true,
+  "license": "UNLICENSED",
+  "keywords": [
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss",
+    "marketing-site",
+    "family-assistant",
+    "whatsapp"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

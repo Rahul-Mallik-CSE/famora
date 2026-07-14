@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Famora Landing Website
 
-## Getting Started
+Famora is a marketing and onboarding website for a WhatsApp-first AI family assistant product.
 
-First, run the development server:
+The project is built with Next.js App Router, React, TypeScript, Tailwind CSS v4, shadcn/radix UI primitives, and Framer Motion.
+
+## Project Goals
+
+- Present the Famora product narrative and key value propositions
+- Explain feature, pricing, and setup flows clearly
+- Provide conversion-oriented paths to the checkout/get-started experience
+- Keep the UI responsive and animation-rich across mobile and desktop
+
+## Tech Stack
+
+- Framework: Next.js 16 (App Router)
+- Runtime UI: React 19
+- Language: TypeScript
+- Styling: Tailwind CSS v4 + custom CSS variables in `src/app/globals.css`
+- UI primitives: shadcn UI and Radix-based components under `src/components/ui`
+- Animation: Framer Motion (`MotionReveal`, `MotionStagger`)
+- Icons: Lucide React and React Icons
+- Linting: ESLint 9 + `eslint-config-next`
+
+## Routes
+
+- `/` Home
+- `/features`
+- `/pricing`
+- `/faq`
+- `/how-it-works`
+- `/about`
+- `/contact`
+- `/get-started`
+
+## Folder Structure
+
+```text
+src/
+	app/
+		layout.tsx              # Global layout with NavBar and Footer
+		page.tsx                # Home page route
+		<route>/page.tsx        # Feature pages (about, pricing, etc.)
+		globals.css             # Theme tokens and global styles
+	components/
+		HomeComponents/
+		FeaturesComponents/
+		PricingComponents/
+		FAQComponents/
+		AboutComponents/
+		ContactComponents/
+		HowItWorksComponents/
+		GetStartedComponents/
+		CommonComponents/       # Shared sections and helpers
+		ui/                     # shadcn/radix UI wrappers
+	lib/
+		utils.ts                # Shared utility helpers
+```
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the local dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Run linting:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create production build:
 
-## Learn More
+```bash
+npm run build
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start production server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Current Scope and Limitations
 
-## Deploy on Vercel
+- The website is currently content-driven and mostly static.
+- Checkout and purchase success flows are UI-only at this stage.
+- Footer links such as blog and legal pages are present in navigation content but corresponding routes are not yet implemented.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Architecture details: `ARCHITECTURE.md`
+- Project snapshot and metadata: `METADATA.md`
+
+## License
+
+This repository is private and currently marked as UNLICENSED.
